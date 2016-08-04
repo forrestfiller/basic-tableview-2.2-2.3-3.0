@@ -41,18 +41,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //self.tests.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt IndexPath: IndexPath) -> UITableViewCell {
         
         let cellId = "cellId"
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellId) {
-            return self.configureCell(cell: cell, indexPath: indexPath)
+            return self.configureCell(cell, indexPath: IndexPath)
         }
         
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        return self.configureCell(cell: cell, indexPath: indexPath)
+        return self.configureCell(cell, indexPath: IndexPath)
     }
     
-    func configureCell(cell:UITableViewCell, indexPath:NSIndexPath) -> UITableViewCell {
+    func configureCell(_ cell:UITableViewCell, indexPath:NSIndexPath) -> UITableViewCell {
         //let test = self.tests[indexPath.row]
         cell.textLabel?.text = "test.additional"
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 24)
@@ -63,7 +63,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // do my animation here and any pushes from here
     }
     
