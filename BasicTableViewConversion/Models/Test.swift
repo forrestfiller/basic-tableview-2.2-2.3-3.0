@@ -10,8 +10,8 @@ import UIKit
 
 class Test: NSObject {
     
-    var data: String?
-    var fearOfChange: Int?
-    var additional: String?
+    var data = "The Data"
+    var fearOfChange = 874538493
+    var additional = "More Examination"
 
 }
